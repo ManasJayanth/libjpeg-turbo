@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "esy-cmake": "*",
+    "esy-nasm": "prometheansacrifice/esy-nasm#6240bdbb164476558d3738812fbbe48f66cc904a",
     "@esy-cross/ninja-build": "^1.8.2001"
   },
   "resolutions": {
