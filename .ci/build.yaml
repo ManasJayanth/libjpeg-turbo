@@ -7,6 +7,9 @@ jobs:
 - job: ${{ parameters.host }}
   pool: ${{ parameters.pool }}
   steps:
+  - ${{ if eq(parameters.host, 'macOS') }}:
+    - script: 'brew install pkg-config'
+      displayName: 'Installing pkg-config'
   - ${{ if eq(parameters.sign, 'true') }}:
     - script: 'npm install -g esy@latest --unsafe-perm'
       displayName: 'Installing deps'
