@@ -7,6 +7,10 @@
       "PKG_CONFIG_PATH": {
         "scope": "global",
         "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH}"
+      },
+      "DYLD_LIBRARY_PATH": {
+        "scope": "global",
+        "val": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/:#{self.lib}:$DYLD_LIBRARY_PATH"
       }
     },
     "build": "#{os == 'windows' ? 'echo esy-libjpeg-turbo currently works on on Linux/OSX': 'bash ./esy-build.sh'}"
