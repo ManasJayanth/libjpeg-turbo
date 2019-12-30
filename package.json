@@ -8,6 +8,10 @@
         "scope": "global",
         "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH}"
       },
+      "LD_LIBRARY_PATH": {
+        "scope": "global",
+        "val": "#{self.lib : $LD_LIBRARY_PATH}"
+      },
       "DYLD_LIBRARY_PATH": {
         "scope": "global",
         "val": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/:#{self.lib}:$DYLD_LIBRARY_PATH"
